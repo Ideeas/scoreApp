@@ -1,12 +1,8 @@
 import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
-import { Input as ElementsInput, InputProps } from 'react-native-elements';
+import { IconProps, Input as ElementsInput, InputProps } from 'react-native-elements';
 
-interface LeftIconProps {
-  name: string;
-  size: number;
-  color: string;
-}
+type LeftIconProps = Partial<IconProps>;
 
 type Props = LeftIconProps & InputProps;
 
