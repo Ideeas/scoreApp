@@ -1,6 +1,6 @@
 import { Action, PersonalInformations } from './types';
 
-interface User {
+export interface User {
   token: string | null;
   data: PersonalInformations;
 }
@@ -15,7 +15,7 @@ const CREATE = 'user/create';
 export default function reducer(state = initialState, action: Action<{}>) {
   switch (action.type) {
     case CREATE: {
-      return { ...state, payload: action.payload };
+      return { ...state, data: action.payload };
     }
   }
 
